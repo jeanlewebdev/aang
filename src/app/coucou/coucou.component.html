@@ -1,0 +1,26 @@
+<p class="rouge">coucou works!</p>
+<h3> je suis coucou</h3>
+<button routerLink="/home">home component</button>
+<div class="bourd">
+  <h3>CHERCHE !</h3>
+  <input type="text" #filouLeFiltre placeholder="chercher">
+  <button class="btn btn-warning" (click)="filtreDeFer(filouLeFiltre.value)" >gogogo</button>
+</div>
+<app-bidule *ngFor="let bidule of filteredBidules" [bidule]="bidule"> </app-bidule>
+
+<form [formGroup]="form" (submit)="sendBidule()">
+
+  <input type="text" formControlName="name">
+  <input type="text" formControlName="description">
+
+  <button type="submit" class="btn btn-success">go</button>
+
+
+
+</form>
+
+
+<div class="container">
+  <input [(ngModel)]="truc" placeholder="essaye">
+  <h2>{{truc}}</h2>
+</div>
